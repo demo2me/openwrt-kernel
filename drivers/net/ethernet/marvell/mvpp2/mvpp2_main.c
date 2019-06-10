@@ -1193,7 +1193,7 @@ static int mvpp2_bm_update_mtu(struct net_device *dev, int mtu)
 					mvpp2_bm_pool_update_fc(port,
 								pools_pcpu[cpu],
 								false);
-			} else if (port->pkt_size > MVPP2_BM_LONG_PKT_SIZE)
+			} else if (pkt_size > MVPP2_BM_LONG_PKT_SIZE)
 				mvpp2_bm_pool_update_fc(port,
 							port->pool_short,
 							false);
@@ -1228,7 +1228,7 @@ static int mvpp2_bm_update_mtu(struct net_device *dev, int mtu)
 					mvpp2_bm_pool_update_fc(port,
 								pools_pcpu[cpu],
 								false);
-			} else if (port->pkt_size > MVPP2_BM_LONG_PKT_SIZE)
+			} else if (pkt_size > MVPP2_BM_LONG_PKT_SIZE)
 				mvpp2_bm_pool_update_fc(port, port->pool_long,
 							true);
 			else
